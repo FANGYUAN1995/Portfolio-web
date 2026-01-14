@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登入 - 作品集</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Inline styles for auth specific overrides/layouts to keep styles.css clean used for main page mostly but we can add to styles.css later if needed. 
+         For now I'll add a specific class for the auth section. -->
+    <style>
+        .auth-section {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 100px 20px 40px;
+            /* Accounts for fixed navbar */
+        }
+
+        .auth-card {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+            padding: 40px;
+            width: 100%;
+            max-width: 450px;
+            text-align: center;
+            animation: fadeIn Up 0.5s ease-out;
+        }
+
+        .auth-card h2 {
+            margin-bottom: 30px;
+            color: #333;
+            font-size: 2rem;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .auth-links {
+            margin-top: 20px;
+            font-size: 0.9rem;
+        }
+
+        .auth-links a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .auth-links a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="navbar">
+        <div class="container">
+            <!-- 請在此處更換 Logo 圖片連結 (建議高度 40px) -->
+            <a href="index.html" class="logo">
+                <img src="imgs/logo.svg" alt="網站 Logo">
+            </a>
+            <nav class="nav-links">
+                <a href="index.html#home" class="nav-link">首頁</a>
+                <a href="index.html#about" class="nav-link">作者介紹</a>
+                <a href="index.html#works" class="nav-link">作品展示</a>
+                <a href="index.html#contact" class="nav-link">聯繫方式</a>
+            </nav>
+            <button class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <section class="auth-section">
+        <div class="auth-card">
+            <h2>會員登入</h2>
+            <form id="loginForm" class="contact-form" style="padding: 0; box-shadow: none; margin: 0;">
+                <div class="form-group">
+                    <label for="username" style="text-align: left;">用戶名 / Email</label>
+                    <input type="text" id="username" name="username" required placeholder="請輸入您的用戶名">
+                </div>
+                <div class="form-group">
+                    <label for="password" style="text-align: left;">密碼</label>
+                    <input type="password" id="password" name="password" required placeholder="請輸入密碼">
+                </div>
+                <button type="submit" class="btn-primary" style="width: 100%;">登入</button>
+            </form>
+            <div class="auth-links">
+                <p>還沒有帳號？ <a href="register.html">立即註冊</a></p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-copyright">
+                <p>版權所有 © 2025 作品集作者</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js_fold/script.js"></script>
+    <script>
+        // Inline script for login specific logic, or we can move to script.js
+        // I will implement the core logic in script.js but basic initialization here if needed.
+        // Actually, let's keep it all in script.js to be cleaner.
+    </script>
+</body>
+
+</html>

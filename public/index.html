@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>作品集 - 創意設計展示</title>
+    <meta name="description" content="專業的作品集網站，展示創意設計作品、作者介紹和聯繫方式">
+    <meta name="keywords" content="作品集,設計,創意,作品展示,作者介紹">
+    <meta name="author" content="作品集作者">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="作品集 - 創意設計展示">
+    <meta property="og:description" content="專業的作品集網站，展示創意設計作品、作者介紹和聯繫方式">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://example.com">
+    <meta property="og:image" content="https://example.com/og-image.jpg">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="favicon.ico" type="imgs/x-icon">
+</head>
+
+<body>
+    <header class="navbar">
+        <div class="container">
+            <!-- 請在此處更換 Logo 圖片連結 (建議高度 40px) -->
+            <a href="index.html" class="logo">
+                <img src="imgs/logo.svg" alt="網站 Logo">
+            </a>
+            <nav class="nav-links">
+                <a href="#home" class="nav-link">首頁</a>
+                <a href="#about" class="nav-link">作者介紹</a>
+                <a href="#works" class="nav-link">作品展示</a>
+                <a href="#future" class="nav-link">未來展望</a>
+                <a href="#contact" class="nav-link">聯繫方式</a>
+                <!-- 動態登入/登出/後台按鈕 -->
+                <span id="nav-auth-container">
+                    <a href="login.html" class="nav-link" id="nav-login-btn">登入</a>
+                </span>
+            </nav>
+            <button class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- 首頁展示區 -->
+    <section id="home" class="hero">
+        <div class="hero-slider">
+            <div class="slide active" style="background-image: url('imgs/hero/01.jpg');">
+                <div class="container">
+                    <h1>角色設計作品集</h1>
+                    <p>展示我的設計理念和創意作品</p>
+                    <a href="#works" class="btn-primary">查看作品</a>
+                </div>
+            </div>
+            <div class="slide" style="background-image: url('imgs/hero/02.jpg');">
+                <div class="container">
+                </div>
+            </div>
+            <div class="slide" style="background-image: url('imgs/hero/03.jpg');">
+                <div class="container">
+                    <h1>創新與藝術的結合</h1>
+                    <p>每一個作品都蘊含獨特的設計思想</p>
+                    <a href="#works" class="btn-primary">查看作品</a>
+                </div>
+            </div>
+            <div class="slide" style="background-image: url('imgs/hero/04.png');">
+                <div class="container">
+                    <h1>設計看見生活</h1>
+                    <p>用攝影觀察更美好的世界</p>
+                    <a href="#works" class="btn-primary">查看作品</a>
+                </div>
+            </div>
+            <div class="slide" style="background-image: url('imgs/hero/05.png');">
+                <div class="container">
+                    <h1>設計看見生活</h1>
+                    <p>用攝影觀察更美好的世界</p>
+                    <a href="#works" class="btn-primary">查看作品</a>
+                </div>
+            </div>
+            <div class="slide" style="background-image: url('imgs/hero/06.png');">
+                <div class="container">
+                    <h1>設計看見生活</h1>
+                    <p>用攝影觀察更美好的世界</p>
+                    <a href="#works" class="btn-primary">查看作品</a>
+                </div>
+            </div>
+            <div class="slide" style="background-image: url('imgs/hero/07.jpg');">
+                <div class="container">
+                    <h1>設計改變生活</h1>
+                    <p>用設計創造更美好的世界</p>
+                    <a href="#works" class="btn-primary">查看作品</a>
+                </div>
+            </div>
+            <div class="slide" style="background-image: url('imgs/hero/08.jpg');">
+                <div class="container">
+                    <h1>設計改變生活</h1>
+                    <p>用設計創造更美好的世界</p>
+                    <a href="#works" class="btn-primary">查看作品</a>
+                </div>
+            </div>
+        </div>
+        <div class="slider-indicators">
+            <button class="indicator active" data-slide="0"></button>
+            <button class="indicator" data-slide="1"></button>
+            <button class="indicator" data-slide="2"></button>
+            <button class="indicator" data-slide="3"></button>
+            <button class="indicator" data-slide="4"></button>
+            <button class="indicator" data-slide="5"></button>
+            <button class="indicator" data-slide="6"></button>
+            <button class="indicator" data-slide="7"></button>
+        </div>
+    </section>
+
+    <!-- 作品分類導航 -->
+    <section class="work-categories">
+        <h2>作品分類</h2>
+        <div class="categories">
+            <button class="category-btn active" data-category="all">全部作品</button>
+            <button class="category-btn" data-category="Scene design">場景設計</button>
+            <button class="category-btn" data-category="Character Design">角色設計</button>
+            <button class="category-btn" data-category="photography">攝影作品</button>
+            <button class="category-btn" data-category="craft">手做作品</button>
+        </div>
+    </section>
+
+    <!-- 作品網格展示 -->
+    <section id="works" class="works scroll-animate">
+        <div class="container">
+
+            <div class="works-grid">
+                <!-- 場景設計 -->
+                <div class="work-item" data-category="Scene design">
+                    <div class="work-image lazy-bg" data-bg-src="imgs/Portfolio/Scene design/01.jpg">
+                        <div class="work-overlay">
+                            <h3>場景設計</h3>
+                            <p>場景設計</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="work-item" data-category="Scene design">
+                    <div class="work-image lazy-bg" data-bg-src="imgs/Portfolio/Scene design/02.jpg">
+                        <div class="work-overlay">
+                            <h3>場景設計</h3>
+                            <p>場景設計</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="work-item" data-category="Scene design">
+                    <div class="work-image lazy-bg" data-bg-src="imgs/Portfolio/Scene design/03.jpg">
+                        <div class="work-overlay">
+                            <h3>場景設計</h3>
+                            <p>場景設計</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="work-item" data-category="Scene design">
+                    <div class="work-image lazy-bg" data-bg-src="imgs/Portfolio/Scene design/04.jpg">
+                        <div class="work-overlay">
+                            <h3>場景設計</h3>
+                            <p>場景設計</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="work-item" data-category="Scene design">
+                    <div class="work-image lazy-bg" data-bg-src="imgs/Portfolio/Scene design/05.jpg">
+                        <div class="work-overlay">
+                            <h3>場景設計</h3>
+                            <p>場景設計</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="work-item" data-category="Scene design">
+                    <div class="work-image lazy-bg" data-bg-src="imgs/Portfolio/Scene design/06.jpg">
+                        <div class="work-overlay">
+                            <h3>場景設計</h3>
+                            <p>場景設計</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 角色設計 -->
+                <div class="work-item" data-category="Character Design">
+                    <div class="work-image lazy-bg" data-bg-src="imgs/Portfolio/Character Design/01.jpg">
+                        <div class="work-overlay">
+                            <h3>角色設計</h3>
+                            <p>角色設計</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="work-item" data-category="Character Design">
+                    <div class="work-image lazy-bg" data-bg-src="imgs/Portfolio/Character Design/02.jpg">
+                        <div class="work-overlay">
+                            <h3>角色設計</h3>
+                            <p>角色設計</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="work-item" data-category="Character Design">
+                    <div class="work-image lazy-bg" data-bg-src="imgs/Portfolio/Character Design/03.jpg">
+                        <div class="work-overlay">
+                            <h3>角色設計</h3>
+                            <p>角色設計</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="work-item" data-category="Character Design">
+                    <div class="work-image lazy-bg" data-bg-src="imgs/Portfolio/Character Design/04.jpg">
+                        <div class="work-overlay">
+                            <h3>角色設計</h3>
+                            <p>角色設計</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="work-item" data-category="Character Design">
+                    <div class="work-image lazy-bg" data-bg-src="imgs/Portfolio/Character Design/05.jpg">
+                        <div class="work-overlay">
+                            <h3>角色設計</h3>
+                            <p>角色設計</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="work-item" data-category="Character Design">
+                    <div class="work-image lazy-bg" data-bg-src="imgs/Portfolio/Character Design/06.jpg">
+                        <div class="work-overlay">
+                            <h3>角色設計</h3>
+                            <p>角色設計</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="work-item" data-category="Character Design">
+                    <div class="work-image lazy-bg" data-bg-src="imgs/Portfolio/Character Design/07.jpg">
+                        <div class="work-overlay">
+                            <h3>角色設計</h3>
+                            <p>角色設計</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="work-item" data-category="Character Design">
+                    <div class="work-image lazy-bg" data-bg-src="imgs/Portfolio/Character Design/08.jpg">
+                        <div class="work-overlay">
+                            <h3>角色設計</h3>
+                            <p>角色設計</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 攝影 -->
+                <div class="work-item" data-category="photography">
+                    <div class="work-image lazy-bg" data-bg-src="imgs/Portfolio/photography/01.png">
+                        <div class="work-overlay">
+                            <h3>攝影作品</h3>
+                            <p>攝影作品</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="work-item" data-category="photography">
+                    <div class="work-image lazy-bg" data-bg-src="imgs/portfolio/photography/02.png">
+                        <div class="work-overlay">
+                            <h3>攝影作品</h3>
+                            <p>攝影作品</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="work-item" data-category="photography">
+                    <div class="work-image lazy-bg" data-bg-src="imgs/Portfolio/photography/03.png">
+                        <div class="work-overlay">
+                            <h3>攝影作品</h3>
+                            <p>攝影作品</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="work-item" data-category="photography">
+                    <div class="work-image lazy-bg" data-bg-src="imgs/Portfolio/photography/04.png">
+                        <div class="work-overlay">
+                            <h3>攝影作品</h3>
+                            <p>攝影作品</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="work-item" data-category="photography">
+                    <div class="work-image lazy-bg" data-bg-src="imgs/Portfolio/photography/05.png">
+                        <div class="work-overlay">
+                            <h3>攝影作品</h3>
+                            <p>攝影作品</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="work-item" data-category="photography">
+                    <div class="work-image lazy-bg" data-bg-src="imgs/Portfolio/photography/06.png">
+                        <div class="work-overlay">
+                            <h3>攝影作品</h3>
+                            <p>攝影作品</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="work-item" data-category="photography">
+                    <div class="work-image lazy-bg" data-bg-src="imgs/Portfolio/photography/07.png">
+                        <div class="work-overlay">
+                            <h3>攝影作品</h3>
+                            <p>攝影作品</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 手做 -->
+                <div class="work-item" data-category="craft">
+                    <div class="work-image lazy-bg" data-bg-src="imgs/Portfolio/Craft/001.jpg">
+                        <div class="work-overlay">
+                            <h3>手做作品</h3>
+                            <p>手做作品</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="work-item" data-category="craft">
+                    <div class="work-image lazy-bg" data-bg-src="imgs/Portfolio/Craft/005.jpg">
+                        <div class="work-overlay">
+                            <h3>手做作品</h3>
+                            <p>手做作品</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="work-item" data-category="craft">
+                    <div class="work-image lazy-bg" data-bg-src="imgs/Portfolio/Craft/008.jpg">
+                        <div class="work-overlay">
+                            <h3>手做作品</h3>
+                            <p>手做作品</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="work-item" data-category="craft">
+                    <div class="work-image lazy-bg" data-bg-src="imgs/Portfolio/Craft/010.jpg">
+                        <div class="work-overlay">
+                            <h3>手做作品</h3>
+                            <p>手做作品</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="work-item" data-category="craft">
+                    <div class="work-image lazy-bg" data-bg-src="imgs/Portfolio/Craft/011.jpg">
+                        <div class="work-overlay">
+                            <h3>手做作品</h3>
+                            <p>手做作品</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="work-item" data-category="craft">
+                    <div class="work-image lazy-bg" data-bg-src="imgs/Portfolio/Craft/014.jpg">
+                        <div class="work-overlay">
+                            <h3>手做作品</h3>
+                            <p>手做作品</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="work-item" data-category="craft">
+                    <div class="work-image lazy-bg" data-bg-src="imgs/Portfolio/Craft/015.jpg">
+                        <div class="work-overlay">
+                            <h3>手做作品</h3>
+                            <p>手做作品</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="work-item" data-category="craft">
+                    <div class="work-image lazy-bg" data-bg-src="imgs/Portfolio/Craft/016.jpg">
+                        <div class="work-overlay">
+                            <h3>手做作品</h3>
+                            <p>手做作品</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="work-item" data-category="craft">
+                    <div class="work-image lazy-bg" data-bg-src="imgs/Portfolio/Craft/017.jpg">
+                        <div class="work-overlay">
+                            <h3>手做作品</h3>
+                            <p>手做作品</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 作者介紹區域 -->
+    <section id="about" class="about scroll-animate">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-image"
+                    style="background-image: url('imgs/author/01.jpg'); background-size: cover; background-position: center;">
+                    <div class="logo-placeholder"></div>
+                </div>
+                <div class="about-text">
+                    <h2>作者介紹</h2>
+                    <p>我是一位多媒體設計系的學生，擁有多年的設計經驗。我的設計理念是將創新與藝術相結合，創造出獨特而有影響力的作品。</p>
+                    <p>我擅長場景設計、角色設計、攝影和手作，致力於為客戶提供高質量的設計解決方案。</p>
+                    <p>我的設計風格簡約而不簡單，注重細節和使用者體驗，力求每一個作品都能傳達出獨特的設計思想和情感。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 未來展望區域 -->
+    <section id="future" class="future scroll-animate">
+        <div class="container">
+            <div class="future-content">
+                <div class="future-text">
+                    <h2>未來展望</h2>
+                    <p>在未來，我將繼續致力於創意設計領域的探索和創新，不斷提升自己的設計能力和藝術修養。</p>
+                    <p>我計劃拓展更多的設計領域，包括3D設計、動效設計和互動設計，為客戶提供更加多元化的設計解決方案。</p>
+                    <p>我相信設計的力量可以改變世界，我將用我的設計作品傳遞正能量，影響更多的人。</p>
+                </div>
+                <div class="future-image"
+                    style="background-image: url('imgs/hero/05.png'); background-size: cover; background-position: center;">
+                    <div class="image-placeholder"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 聯繫方式表單 -->
+    <section id="contact" class="contact scroll-animate">
+        <div class="container">
+            <h2>聯繫方式</h2>
+            <form class="contact-form" id="contactForm">
+                <div class="form-group">
+                    <label for="name">姓名</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">電子信箱</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="subject">主題</label>
+                    <input type="text" id="subject" name="subject" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">留言</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="btn-primary">發送留言</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- 頁腳區域 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <!-- 請在此處更換 Logo 圖片連結 (建議高度 40px) -->
+                <a href="index.html" class="footer-logo">
+                    <img src="imgs/logo.svg" alt="網站 Logo">
+                </a>
+                <div class="footer-links">
+                    <a href="#home" class="footer-link">首頁</a>
+                    <a href="#about" class="footer-link">作者介紹</a>
+                    <a href="#works" class="footer-link">作品展示</a>
+                    <a href="#future" class="footer-link">未來展望</a>
+                    <a href="#contact" class="footer-link">聯繫方式</a>
+                </div>
+                <div class="footer-social">
+                    <a href="https://www.facebook.com/share/1DcoqiwX5y/?mibextid=wwXIfr" class="social-link"
+                        target="_blank" rel="noopener noreferrer">facebook</a>
+                    <a href="https://www.instagram.com/mochidzuki_030?igsh=anhhZjdpeDZqdXZx&utm_source=qr"
+                        class="social-link" target="_blank" rel="noopener noreferrer">Instagram</a>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                <p>版權所有 © 2025 作品集作者</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 返回頂部按鈕 -->
+    <button class="back-to-top" id="backToTop">
+        <span>↑</span>
+    </button>
+
+    <script src="js_fold/script.js"></script>
+</body>
+
+</html>

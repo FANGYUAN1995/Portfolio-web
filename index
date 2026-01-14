@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>專案名稱 — 簡易骨架</title>
+  <meta name="description" content="專案簡介，寫幾句讓老師看得懂你做什麼。">
+  <style>
+    /* ------------------------
+       基本樣式（mobile-first）
+       可直接貼到檔案中使用
+       ------------------------ */
+    :root{
+      --max-width:1100px;
+      --accent:#6b46c1; /* 可替換的主色 */
+      --muted:#666;
+      --bg:#f7f7fb;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", Roboto, "Noto Sans", "PingFang TC", "Microsoft JhengHei", sans-serif;
+      background:var(--bg);
+      color:#111;
+      line-height:1.45;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      padding:24px 16px;
+    }
+    .container{
+      max-width:var(--max-width);
+      margin:0 auto;
+    }
+
+    /* header / nav */
+    header{
+      background:#fff;
+      border-radius:12px;
+      padding:12px 16px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      box-shadow:0 6px 18px rgba(33,33,33,0.06);
+    }
+    .brand{font-weight:700; color:var(--accent)}
+    nav{display:flex;gap:12px;align-items:center}
+    nav a{color:var(--muted); text-decoration:none; font-size:14px}
+    .cta{padding:8px 12px; border-radius:8px; background:var(--accent); color:#fff; text-decoration:none}
+
+    /* hero */
+    .hero{
+      margin:18px 0;
+      background:linear-gradient(180deg, rgba(107,70,161,0.06), rgba(107,70,161,0.02));
+      border-radius:12px; padding:28px; display:grid; gap:12px;
+    }
+    .hero h1{margin:0;font-size:22px}
+    .hero p{margin:0;color:var(--muted)}
+    .hero .actions{display:flex;gap:10px;margin-top:12px}
+
+    /* sections */
+    section.card{
+      background:#fff;border-radius:12px;padding:18px;margin:12px 0;box-shadow:0 6px 18px rgba(33,33,33,0.04);
+    }
+    .grid-2{display:grid;grid-template-columns:1fr;gap:12px}
+
+    /* small gallery */
+    .thumbs{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+    .thumbs img{width:100%;height:80px;object-fit:cover;border-radius:8px}
+
+    /* footer */
+    footer{margin-top:18px;text-align:center;color:var(--muted);font-size:13px}
+
+    /* responsive: larger screens */
+    @media(min-width:800px){
+      body{padding:40px}
+      .hero{grid-template-columns:1fr 360px;align-items:center}
+      .hero h1{font-size:28px}
+      .grid-2{grid-template-columns:1fr 1fr}
+      nav a{font-size:15px}
+    }
+
+    /* tiny utilities */
+    .muted{color:var(--muted);font-size:14px}
+    .mono{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, 'Roboto Mono', 'Noto Sans Mono', monospace}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">專案名稱</div>
+      <nav aria-label="主要導覽">
+        <a href="#about">About</a>
+        <a href="#works">Works</a>
+        <a href="#contact">Contact</a>
+        <a class="cta" href="#">進度</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero card" aria-labelledby="hero-title">
+        <div>
+          <h1 id="hero-title">這是你的作品 / 專案標題</h1>
+          <p class="muted">一句話說明你做了什麼、目前進度、老師要看的重點或問題（ex: 我還需要在樣式與互動上調整）</p>
+          <div class="actions">
+            <a class="cta" href="#works">示範</a>
+            <a href="#contact">聯絡我</a>
+          </div>
+        </div>
+
+        <div class="card mono" style="padding:12px">
+          <strong>交差清單</strong>
+          <ul>
+            <li>PPT：已準備 8 張，需確認第 3 張重點</li>
+            <li>影片：15 秒蒙太奇初版（等待素材）</li>
+            <li>網頁：基礎骨架已完成（可於 12/10 呈交）</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="about" class="card" aria-labelledby="about-title">
+        <h2 id="about-title">專案說明 / 需求</h2>
+        <p class="muted">在這裡把你要跟老師問的問題用條列方式寫出來，越具體越好（例如：排版的字體大小、按鈕互動時的預期、或是影片的節奏是否合適）。</p>
+      </section>
+
+      <section id="works" class="card" aria-labelledby="works-title">
+        <h2 id="works-title">作品 / 示範</h2>
+        <div class="grid-2">
+          <div>
+            <p class="muted">放一些圖片或小影片截圖：</p>
+            <div class="thumbs">
+              <img src="https://via.placeholder.com/400x300?text=圖1" alt="示意圖1">
+              <img src="https://via.placeholder.com/400x300?text=圖2" alt="示意圖2">
+              <img src="https://via.placeholder.com/400x300?text=圖3" alt="示意圖3">
+            </div>
+          </div>
+          <div>
+            <p><strong>網頁進度</strong></p>
+            <p class="muted">目前完成：HTML 架構、hero、基本樣式。接下來：連接作品內容、調整樣式、加入互動（若有時間）。</p>
+            <p><strong>提醒（交件重點）</strong></p>
+            <ol class="muted">
+              <li>呈現目前可互動的頁面或元件</li>
+              <li>說明你接下來要完成的項目與預估時間</li>
+              <li>把卡住的問題列出給老師（技術或設計）</li>
+            </ol>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="card" aria-labelledby="contact-title">
+        <h2 id="contact-title">聯絡 / 備註</h2>
+        <p class="muted">放上你的 GitHub / prototype 連結（或貼上本地端開啟指示），並標註你希望老師檢查的細節。</p>
+      </section>
+
+    </main>
+
+    <footer>
+      © 2025 專案名稱 • 建議先把此檔另存為 index.html 並上傳到 GitHub Pages 或放在老師能開啟的資料夾。
+    </footer>
+  </div>
+
+  <!-- 若你想在本地測試一個簡單的 live server 流程，可把此檔放入任何靜態伺服器（例如：VSCode Live Server） -->
+</body>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>註冊 - 作品集</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .auth-section {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 100px 20px 40px;
+        }
+
+        .auth-card {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+            padding: 40px;
+            width: 100%;
+            max-width: 450px;
+            text-align: center;
+            animation: fadeIn Up 0.5s ease-out;
+        }
+
+        .auth-card h2 {
+            margin-bottom: 30px;
+            color: #333;
+            font-size: 2rem;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .auth-links {
+            margin-top: 20px;
+            font-size: 0.9rem;
+        }
+
+        .auth-links a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .auth-links a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="navbar">
+        <div class="container">
+            <!-- 請在此處更換 Logo 圖片連結 (建議高度 40px) -->
+            <a href="index.html" class="logo">
+                <img src="imgs/logo.svg" alt="網站 Logo">
+            </a>
+            <nav class="nav-links">
+                <a href="index.html#home" class="nav-link">首頁</a>
+                <a href="index.html#about" class="nav-link">作者介紹</a>
+                <a href="index.html#works" class="nav-link">作品展示</a>
+                <a href="index.html#contact" class="nav-link">聯繫方式</a>
+            </nav>
+            <button class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <section class="auth-section">
+        <div class="auth-card">
+            <h2>建立新帳號</h2>
+            <form id="registerForm" class="contact-form" style="padding: 0; box-shadow: none; margin: 0;">
+                <div class="form-group">
+                    <label for="username" style="text-align: left;">用戶名</label>
+                    <input type="text" id="username" name="username" required placeholder="請設定您的用戶名">
+                </div>
+                <div class="form-group">
+                    <label for="email" style="text-align: left;">電子信箱</label>
+                    <input type="email" id="email" name="email" required placeholder="name@example.com">
+                </div>
+                <div class="form-group">
+                    <label for="password" style="text-align: left;">設定密碼</label>
+                    <input type="password" id="password" name="password" required placeholder="至少 6 位數">
+                </div>
+                <div class="form-group">
+                    <label for="confirm-password" style="text-align: left;">確認密碼</label>
+                    <input type="password" id="confirm-password" name="confirm-password" required placeholder="再次輸入密碼">
+                </div>
+                <button type="submit" class="btn-primary" style="width: 100%;">註冊</button>
+            </form>
+            <div class="auth-links">
+                <p>已經有帳號？ <a href="login.html">立即登入</a></p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-copyright">
+                <p>版權所有 © 2025 作品集作者</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js_fold/script.js"></script>
+</body>
+
+</html>
